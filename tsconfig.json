@@ -2,7 +2,6 @@
   "compilerOptions": {
     "allowJs": true,
     "target": "esnext",
-    "lib": ["ESNext"],
     "rootDir": "${configDir}/src",
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
@@ -12,7 +11,7 @@
     "outDir": "${configDir}/lib",
     "strict": true,
     "skipLibCheck": true,
-    "customConditions": ["livetypes"]
+    "customConditions": ["apekit"]
   },
   "include": ["${configDir}/src"],
   "exclude": ["node_modules", "${configDir}/lib"]
