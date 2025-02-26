@@ -1,0 +1,21 @@
+{
+  "name": "apekit",
+  "version": "0.0.1",
+  "repository": "https://github.com/primatejs/apekit.git",
+  "license": "MIT",
+  "dependencies": {
+    "debris": "^0.14.0",
+    "tsx": "^4.19.3",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.25.0",
+    "@eslint/js": "^9.21.0",
+    "@types/node": "^22.13.5"
+  },
+  "peerDependencies": {
+    "eslint": "^9.21.0"
+  },
+  "type": "module",
+  "exports": {
+    "./lint": "./eslint.config.js"
+  }
+}
