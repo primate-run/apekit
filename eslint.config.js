@@ -19,7 +19,6 @@ export default tsconfigRootDir => tseslint.config(
       },
     },
     rules: {
-      "accessor-pairs": "error",
       "@typescript-eslint/await-thenable": "error",
       "@typescript-eslint/ban-types": "off",
       "@typescript-eslint/no-explicit-any": "off",
@@ -36,7 +35,9 @@ export default tsconfigRootDir => tseslint.config(
           "varsIgnorePattern": "^_",
           "ignoreRestSiblings": true
         }
-      ]
+      ],
+      "accessor-pairs": "error",
+      "no-shadow": "error",
     }
   },
 );
