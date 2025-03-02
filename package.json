@@ -1,6 +1,6 @@
 {
   "name": "apekit",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "repository": "https://github.com/primatejs/apekit.git",
   "license": "MIT",
   "dependencies": {
