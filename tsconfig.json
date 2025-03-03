@@ -11,7 +11,8 @@
     "outDir": "${configDir}/lib",
     "strict": true,
     "skipLibCheck": true,
-    "customConditions": ["apekit"]
+    "customConditions": ["apekit"],
+    "erasableSyntaxOnly": true
   },
   "include": ["${configDir}/src"],
   "exclude": ["node_modules", "${configDir}/lib"]
