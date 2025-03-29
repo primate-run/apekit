@@ -1,5 +1,6 @@
 import eslint from "@eslint/js";
 import tseslint from "typescript-eslint";
+import stylistic from "@stylistic/eslint-plugin";
 
 export default tsconfigRootDir => tseslint.config(
   eslint.configs.recommended,
@@ -12,6 +13,9 @@ export default tsconfigRootDir => tseslint.config(
     ]
   },
   {
+    plugins: {
+      "@stylistic": stylistic,
+    },
     languageOptions: {
       parserOptions: {
         project: true,
@@ -19,6 +23,7 @@ export default tsconfigRootDir => tseslint.config(
       },
     },
     rules: {
+      "@stylistic/no-trailing-spaces": "error",
       "@typescript-eslint/await-thenable": "error",
       "@typescript-eslint/ban-types": "off",
       "@typescript-eslint/consistent-type-imports": "error",
