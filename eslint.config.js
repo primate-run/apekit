@@ -2,6 +2,8 @@ import eslint from "@eslint/js";
 import tseslint from "typescript-eslint";
 import stylistic from "@stylistic/eslint-plugin";
 
+const error = (...params) => ["error", ...params];
+
 export default tsconfigRootDir => tseslint.config(
   eslint.configs.recommended,
   ...tseslint.configs.recommended,
@@ -24,6 +26,7 @@ export default tsconfigRootDir => tseslint.config(
     },
     rules: {
       "@stylistic/no-trailing-spaces": "error",
+      "@stylistic/max-len": error({ code: 80 }),
       "@typescript-eslint/await-thenable": "error",
       "@typescript-eslint/ban-types": "off",
       "@typescript-eslint/consistent-type-imports": "error",
