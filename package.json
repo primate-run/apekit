@@ -1,6 +1,6 @@
 {
   "name": "apekit",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "repository": "https://github.com/primatejs/apekit.git",
   "scripts": {
     "publish": "pnpm --access=public --otp=$(bw get totp npmjs.com) publish",
