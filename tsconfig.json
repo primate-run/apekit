@@ -12,6 +12,7 @@
     "strict": true,
     "skipLibCheck": true,
     "customConditions": ["apekit"],
+    "exactOptionalPropertyTypes": true,
     "erasableSyntaxOnly": true
   },
   "include": ["${configDir}/src"],
