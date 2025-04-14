@@ -3,7 +3,7 @@
   "version": "0.0.10",
   "repository": "https://github.com/primatejs/apekit.git",
   "scripts": {
-    "publish": "pnpm --access=public --otp=$(bw get totp npmjs.com) publish",
+    "publish": "pnpm --otp=$(bw get totp npmjs.com) publish",
     "upgrade": "pnpm update -i -L"
   },
   "license": "MIT",
