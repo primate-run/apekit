@@ -25,16 +25,12 @@ export default tsconfigRootDir => tseslint.config(
       },
     },
     rules: {
+      "@typescript-eslint/ban-types": "off",
+      "@typescript-eslint/no-explicit-any": "off",
+      "@typescript-eslint/no-unused-expressions": "off",
+
       "no-unused-private-class-members": "warn",
       "no-shadow": "warn",
-      "@stylistic/no-trailing-spaces": "error",
-      "@stylistic/max-len": error({ code: 80 }),
-      "@typescript-eslint/await-thenable": "error",
-      "@typescript-eslint/ban-types": "off",
-      "@typescript-eslint/consistent-type-imports": "error",
-      "@typescript-eslint/no-explicit-any": "off",
-      "@typescript-eslint/no-unnecessary-condition": "error",
-      "@typescript-eslint/no-unused-expressions": "off",
       "@typescript-eslint/no-unused-vars": [
         "warn",
         {
@@ -47,8 +43,13 @@ export default tsconfigRootDir => tseslint.config(
           "ignoreRestSiblings": true
         }
       ],
+
       "accessor-pairs": "error",
-      "no-shadow": "error",
+      "@stylistic/no-trailing-spaces": "error",
+      "@stylistic/max-len": error({ code: 80 }),
+      "@typescript-eslint/await-thenable": "error",
+      "@typescript-eslint/consistent-type-imports": "error",
+      "@typescript-eslint/no-unnecessary-condition": "error",
     }
   },
 );
