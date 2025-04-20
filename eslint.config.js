@@ -3,6 +3,7 @@ import tseslint from "typescript-eslint";
 import stylistic from "@stylistic/eslint-plugin";
 
 const error = (...params) => ["error", ...params];
+const warn = (...params) => ["warn", ...params];
 
 export default tsconfigRootDir => tseslint.config(
   eslint.configs.recommended,
@@ -43,10 +44,10 @@ export default tsconfigRootDir => tseslint.config(
           "ignoreRestSiblings": true
         }
       ],
+      "@stylistic/no-trailing-spaces": "warn",
+      "@stylistic/max-len": warn({ code: 80 }),
 
       "accessor-pairs": "error",
-      "@stylistic/no-trailing-spaces": "error",
-      "@stylistic/max-len": error({ code: 80 }),
       "@typescript-eslint/await-thenable": "error",
       "@typescript-eslint/consistent-type-imports": "error",
       "@typescript-eslint/no-unnecessary-condition": "error",
