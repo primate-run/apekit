@@ -11,7 +11,6 @@
     "@eslint/js": "^9.24.0",
     "@stylistic/eslint-plugin": "^4.2.0",
     "@types/node": "^22.14.1",
-    "debris": "^0.14.0",
     "eslint": "^9.24.0",
     "tsx": "^4.19.3",
     "typescript": "^5.8.3",
