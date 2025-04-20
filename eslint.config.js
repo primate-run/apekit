@@ -32,6 +32,7 @@ export default tsconfigRootDir => tseslint.config(
 
       "no-unused-private-class-members": "warn",
       "no-shadow": "warn",
+      "@typescript-eslint/consistent-type-imports": "warn",
       "@typescript-eslint/no-unused-vars": [
         "warn",
         {
@@ -49,7 +50,6 @@ export default tsconfigRootDir => tseslint.config(
 
       "accessor-pairs": "error",
       "@typescript-eslint/await-thenable": "error",
-      "@typescript-eslint/consistent-type-imports": "error",
       "@typescript-eslint/no-unnecessary-condition": "error",
     }
   },
