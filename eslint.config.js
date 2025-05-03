@@ -53,4 +53,12 @@ export default tsconfigRootDir => tseslint.config(
       "@typescript-eslint/no-unnecessary-condition": "error",
     }
   },
+  {
+    files: ["**/*.spec.ts"],
+    rules: {
+      "@typescript-eslint/no-wrapper-object-types": "off",
+      "@typescript-eslint/no-unsafe-function-type": "off",
+      "no-sparse-arrays": "off",
+    }
+  }
 );
