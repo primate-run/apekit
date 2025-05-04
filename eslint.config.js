@@ -47,6 +47,10 @@ export default tsconfigRootDir => tseslint.config(
       ],
       "@stylistic/no-trailing-spaces": "warn",
       "@stylistic/max-len": warn({ code: 80 }),
+      "@stylistic/key-spacing": "warn",
+      "@stylistic/comma-dangle": ["warn", "always-multiline"],
+      "@stylistic/semi": "warn",
+      "@stylistic/member-delimiter-style": "warn",
 
       "accessor-pairs": "error",
       "@typescript-eslint/await-thenable": "error",
