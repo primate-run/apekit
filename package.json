@@ -1,7 +1,7 @@
 {
   "name": "apekit",
-  "version": "0.0.14",
-  "repository": "https://github.com/primatejs/apekit.git",
+  "version": "0.0.15",
+  "repository": "https://github.com/primate-run/apekit.git",
   "scripts": {
     "upgrade": "pnpm update -i -L"
   },
