@@ -51,6 +51,7 @@ export default tsconfigRootDir => tseslint.config(
       "@stylistic/comma-dangle": ["warn", "always-multiline"],
       "@stylistic/semi": "warn",
       "@stylistic/member-delimiter-style": "warn",
+      "@stylistic/indent": warn(2),
 
       "accessor-pairs": "error",
       "@typescript-eslint/await-thenable": "error",
