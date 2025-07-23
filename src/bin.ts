@@ -12,20 +12,21 @@ if (args[0] === "bump") {
 
   const match = version.match(/^(?<major>\d+)\.(?<minor>\d+)\.(?<patch>\d+)$/);
   if (match?.groups) {
-    let major: number = 0;
-    let minor: number = 0;
-    let patch: number = 0;
+    let major: number = Number(match.groups.major);
+    let minor: number = Number(match.groups.minor);
+    let patch: number = Number(match.groups.patch);
+
     if (type === "major") {
-      major = Number(match.groups.major) + 1;
+      major++;
       minor = 0;
       patch = 0;
     }
     if (type === "minor") {
-      minor = Number(match.groups.minor) + 1;
+      minor++;
       patch = 0;
     }
     if (type === "patch") {
-      patch = Number(match.groups.patch) + 1;
+      patch++;
     }
     package_json.version = `${major}.${minor}.${patch}`;
     await json.write(JSON.stringify(package_json, undefined, 2));
