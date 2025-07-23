@@ -2,10 +2,10 @@ import eslint from "@eslint/js";
 import stylistic from "@stylistic/eslint-plugin";
 import tseslint from "typescript-eslint";
 
-const error = (...params) => ["error", ...params];
-const warn = (...params) => ["warn", ...params];
+const error = (...params: unknown[]): any => ["error", ...params];
+const warn = (...params: unknown[]): any => ["warn", ...params];
 
-export default tsconfigRootDir => tseslint.config(
+export default (tsconfigRootDir: any): any => tseslint.config(
   eslint.configs.recommended,
   ...tseslint.configs.recommended,
   {
