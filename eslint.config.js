@@ -1,6 +1,6 @@
 import eslint from "@eslint/js";
-import tseslint from "typescript-eslint";
 import stylistic from "@stylistic/eslint-plugin";
+import tseslint from "typescript-eslint";
 
 const error = (...params) => ["error", ...params];
 const warn = (...params) => ["warn", ...params];
@@ -51,7 +51,8 @@ export default tsconfigRootDir => tseslint.config(
       "@stylistic/comma-dangle": ["warn", "always-multiline"],
       "@stylistic/semi": "warn",
       "@stylistic/member-delimiter-style": "warn",
-      "@stylistic/indent": warn(2),
+      "@stylistic/quotes": warn(),
+      "@stylistic/no-multiple-empty-lines": warn({ max: 1 }),
 
       "accessor-pairs": "error",
       "@typescript-eslint/await-thenable": "error",
