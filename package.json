@@ -1,16 +1,10 @@
 {
   "name": "apekit",
   "version": "0.0.25",
-  "repository": "https://github.com/primate-run/apekit.git",
-  "scripts": {
-    "upgrade": "pnpm update -i -L"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/primate-run/apekit.git"
   },
-  "files": [
-    "/lib/**/*.js",
-    "/lib/**/*.json",
-    "/lib/**/*.d.ts",
-    "!/**/*.spec.*"
-  ],
   "scripts": {
     "build": "npm run clean && tsc && cp tsconfig.json lib/tsconfig.json",
     "clean": "rm -rf ./lib",
@@ -18,7 +12,15 @@
     "prepublishOnly": "npm run build",
     "test": "npm run build && npx proby"
   },
-  "bin": "lib/bin.js",
+  "files": [
+    "/lib/**/*.js",
+    "/lib/**/*.json",
+    "/lib/**/*.d.ts",
+    "!/**/*.spec.*"
+  ],
+  "bin": {
+    "apekit": "lib/bin.js"
+  },
   "license": "MIT",
   "dependencies": {
     "@eslint/js": "^9.31.0",
