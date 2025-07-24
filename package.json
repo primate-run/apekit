@@ -1,17 +1,18 @@
 {
   "name": "apekit",
-  "version": "0.0.23",
+  "version": "0.0.24",
   "repository": "https://github.com/primate-run/apekit.git",
   "scripts": {
     "upgrade": "pnpm update -i -L"
   },
   "files": [
     "/lib/**/*.js",
+    "/lib/**/*.json",
     "/lib/**/*.d.ts",
     "!/**/*.spec.*"
   ],
   "scripts": {
-    "build": "npm run clean && tsc",
+    "build": "npm run clean && tsc && cp tsconfig.json lib/tsconfig.json",
     "clean": "rm -rf ./lib",
     "lint": "eslint .",
     "prepublishOnly": "npm run build",
@@ -33,7 +34,7 @@
   },
   "type": "module",
   "exports": {
-    "./lint": "./eslint.config.js",
-    "./tsconfig": "./tsconfig.json"
+    "./lint": "./lib/eslint.config.js",
+    "./tsconfig": "./lib/tsconfig.json"
   }
 }
