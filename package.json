@@ -1,11 +1,12 @@
 {
   "name": "apekit",
-  "version": "0.0.30",
+  "version": "0.0.31",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/primate-run/apekit.git"
   },
   "scripts": {
+    "publish": "pnpm publish --otp=$(bw get totp npmjs.com)",
     "build": "npm run clean && tsc && cp tsconfig.json lib/tsconfig.json",
     "clean": "rm -rf ./lib",
     "lint": "eslint .",
