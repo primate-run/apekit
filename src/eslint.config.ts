@@ -61,7 +61,6 @@ export default (tsconfigRootDir: string): any => tseslint.config(
       "@perfectionist/sort-objects": warn(),
       "@perfectionist/sort-object-types": warn(),
       "@perfectionist/sort-interfaces": warn(),
-      "@perfectionist/sort-classes": warn(),
 
       "accessor-pairs": "error",
       "@typescript-eslint/await-thenable": "error",
