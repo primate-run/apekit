@@ -1,5 +1,6 @@
 import eslint from "@eslint/js";
 import stylistic from "@stylistic/eslint-plugin";
+import perfectionist from "eslint-plugin-perfectionist";
 import tseslint from "typescript-eslint";
 
 const error = (...params: unknown[]): any => ["error", ...params];
@@ -8,6 +9,7 @@ const warn = (...params: unknown[]): any => ["warn", ...params];
 export default (tsconfigRootDir: string): any => tseslint.config(
   eslint.configs.recommended,
   ...tseslint.configs.recommended,
+  perfectionist.configs["recommended-alphabetical"],
   {
     ignores: [
       "scripts/*.js",
@@ -18,6 +20,7 @@ export default (tsconfigRootDir: string): any => tseslint.config(
   {
     plugins: {
       "@stylistic": stylistic,
+      perfectionist,
     },
     languageOptions: {
       parserOptions: {
