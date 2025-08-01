@@ -9,7 +9,6 @@ const warn = (...params: unknown[]): any => ["warn", ...params];
 export default (tsconfigRootDir: string): any => tseslint.config(
   eslint.configs.recommended,
   ...tseslint.configs.recommended,
-  perfectionist.configs["recommended-alphabetical"],
   {
     ignores: [
       "scripts/*.js",
@@ -20,7 +19,7 @@ export default (tsconfigRootDir: string): any => tseslint.config(
   {
     plugins: {
       "@stylistic": stylistic,
-      perfectionist,
+      "@perfectionist": perfectionist,
     },
     languageOptions: {
       parserOptions: {
@@ -56,6 +55,11 @@ export default (tsconfigRootDir: string): any => tseslint.config(
       "@stylistic/member-delimiter-style": "warn",
       "@stylistic/quotes": warn(),
       "@stylistic/no-multiple-empty-lines": warn({ max: 1 }),
+      "@perfectionist/sort-union-types": warn(),
+      "@perfectionist/sort-intersection-types": warn(),
+      "@perfectionist/sort-array-includes": warn(),
+      "@perfectionist/sort-objects": warn(),
+      "@perfectionist/sort-interfaces": warn(),
 
       "accessor-pairs": "error",
       "@typescript-eslint/await-thenable": "error",
