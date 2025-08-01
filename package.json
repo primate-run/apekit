@@ -1,6 +1,6 @@
 {
   "name": "apekit",
-  "version": "0.0.26",
+  "version": "0.0.27",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/primate-run/apekit.git"
@@ -23,15 +23,15 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@eslint/js": "^9.31.0",
-    "@rcompat/args": "^0.7.0",
-    "@rcompat/assert": "^0.1.2",
-    "@rcompat/package": "^0.13.1",
+    "@eslint/js": "^9.32.0",
+    "@rcompat/args": "^0.8.0",
+    "@rcompat/assert": "^0.2.0",
+    "@rcompat/package": "^0.18.0",
     "@stylistic/eslint-plugin": "^5.2.2",
     "@types/node": "^24.1.0",
-    "eslint": "^9.31.0",
+    "eslint": "^9.32.0",
     "tsx": "^4.20.3",
-    "typescript": "^5.8.3",
+    "typescript": "^5.9.2",
     "typescript-eslint": "^8.38.0"
   },
   "type": "module",

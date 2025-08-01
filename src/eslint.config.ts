@@ -5,7 +5,7 @@ import tseslint from "typescript-eslint";
 const error = (...params: unknown[]): any => ["error", ...params];
 const warn = (...params: unknown[]): any => ["warn", ...params];
 
-export default (tsconfigRootDir: any): any => tseslint.config(
+export default (tsconfigRootDir: string): any => tseslint.config(
   eslint.configs.recommended,
   ...tseslint.configs.recommended,
   {
