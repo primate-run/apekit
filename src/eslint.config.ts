@@ -57,8 +57,6 @@ export default (tsconfigRootDir: string): any => tseslint.config(
       "@stylistic/no-multiple-empty-lines": warn({ max: 1 }),
       "@perfectionist/sort-union-types": warn(),
       "@perfectionist/sort-intersection-types": warn(),
-      "@perfectionist/sort-array-includes": warn(),
-      "@perfectionist/sort-objects": warn(),
       "@perfectionist/sort-object-types": warn(),
       "@perfectionist/sort-interfaces": warn(),
 
