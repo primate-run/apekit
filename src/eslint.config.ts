@@ -1,6 +1,5 @@
 import eslint from "@eslint/js";
 import stylistic from "@stylistic/eslint-plugin";
-import perfectionist from "eslint-plugin-perfectionist";
 import tseslint from "typescript-eslint";
 
 const error = (...params: unknown[]): any => ["error", ...params];
@@ -19,7 +18,6 @@ export default (tsconfigRootDir: string): any => tseslint.config(
   {
     plugins: {
       "@stylistic": stylistic,
-      "@perfectionist": perfectionist,
     },
     languageOptions: {
       parserOptions: {
@@ -55,10 +53,6 @@ export default (tsconfigRootDir: string): any => tseslint.config(
       "@stylistic/member-delimiter-style": "warn",
       "@stylistic/quotes": warn(),
       "@stylistic/no-multiple-empty-lines": warn({ max: 1 }),
-      "@perfectionist/sort-union-types": warn(),
-      "@perfectionist/sort-intersection-types": warn(),
-      "@perfectionist/sort-object-types": warn(),
-      "@perfectionist/sort-interfaces": warn(),
 
       "accessor-pairs": "error",
       "@typescript-eslint/await-thenable": "error",
