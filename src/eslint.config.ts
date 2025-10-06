@@ -56,8 +56,7 @@ export default (tsconfigRootDir: string): any => tseslint.config(
 
       "accessor-pairs": "error",
       "@typescript-eslint/await-thenable": "error",
-      "@typescript-eslint/no-unnecessary-condition": "error",
-      "@typescript-eslint/explicit-module-boundary-types": "error",
+      "@typescript-eslint/no-unnecessary-condition": "error"
     }
   },
   {
